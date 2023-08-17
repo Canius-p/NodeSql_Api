@@ -6,7 +6,7 @@ const {
 const apiDocumentation = {
   openapi: '3.0.0',
   info: {
-    title: 'Swagger Tutorial By Sakar',
+    title: 'Sakar Arayl Iphone gift handeu',
     version: '15',
     description: 'This is practise Swagger UI',
     summary: '',
@@ -29,7 +29,14 @@ const apiDocumentation = {
     '/api/products/addProduct': {
       post: routeAnnotations.addProduct,
     },
-    // Add other paths here...
+    '/api/products/published': {
+      get: routeAnnotations.getPublishedProducts,
+    },
+    '/api/products/{id}': {
+      get: routeAnnotations.getSingleProducts,
+      put: routeAnnotations.updateProducts,
+      delete: routeAnnotations.deleteProducts,
+    },
   },
   components: {
     schemas: productDtoSchema,
